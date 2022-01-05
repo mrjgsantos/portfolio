@@ -15,12 +15,14 @@ var canvas = function (p) {
   let easing = 0.07;
   let permissionGranted = false;
 
+  let video1;
+
   p.preload = function () {
-    img1 = p.loadImage("data/1.png");
+    img1 = p.loadImage("data/1.jpg");
     img2 = p.loadImage("data/2.png");
     img3 = p.loadImage("data/3.png");
     img4 = p.loadImage("data/4.png");
-    robotoMonoLight = p.loadFont("data/RobotoMono-Light.ttf");
+    robotoMonoLight = p.loadFont("data/Poppins-Light.ttf");
 
     if (p.windowWidth > p.windowHeight) {
       containerH = p.windowHeight;
@@ -33,6 +35,7 @@ var canvas = function (p) {
 
   p.setup = function () {
     p.createCanvas(containerW, containerH);
+
     cx = p.width / 2;
     cy = p.height / 2;
 
@@ -81,17 +84,19 @@ var canvas = function (p) {
     cx = p.constrain(cx, 25, p.width - 25);
     cy = p.constrain(cy, 25, p.height - 25);
 
-    p.strokeWeight(1);
-    p.stroke(100);
+    /* p.strokeWeight(1);
+    p.stroke(100); */
     p.textSize(24);
     p.textFont(robotoMonoLight);
     p.fill(25, 29, 35, alpha1);
     p.image(img1, 0, 0, containerW / 2, containerH / 2);
-    p.noStroke();
     p.rect(0, 0, containerW / 2, containerH / 2);
+    p.noStroke();
     p.fill(255);
     p.text("Editorial", 20, 15, p.LEFT, p.TOP);
 
+    /* p.strokeWeight(1);
+    p.stroke(100); */
     p.fill(25, 29, 35, alpha2);
     p.image(img2, containerW / 2, 0, containerW / 2, containerH / 2);
     p.rect(containerW / 2, 0, containerW / 2, containerH / 2);
@@ -99,6 +104,8 @@ var canvas = function (p) {
     p.noStroke();
     p.text("Web Design", containerW / 2 + 20, 15, p.LEFT, p.TOP);
 
+    /* p.strokeWeight(1);
+    p.stroke(100); */
     p.fill(25, 29, 35, alpha3);
     p.image(img3, 0, containerH / 2, containerW / 2, containerH / 2);
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
@@ -107,6 +114,7 @@ var canvas = function (p) {
     p.text("Fotografia", 20, containerH / 2 + 15, p.LEFT, p.TOP);
 
     p.fill(25, 29, 35, alpha4);
+
     p.image(
       img4,
       containerW / 2,
@@ -114,6 +122,8 @@ var canvas = function (p) {
       containerW / 2,
       containerH / 2
     );
+    /* p.strokeWeight(1);
+    p.stroke(100); */
     p.rect(containerW / 2, containerH / 2, containerW / 2, containerH / 2);
     p.fill(255);
     p.noStroke();
@@ -125,57 +135,57 @@ var canvas = function (p) {
     alpha4 = alpha4 + (alphaT4 - alpha4) * easing;
 
     if (typeof window.orientation == "undefined") {
-      cursorx = p.mouseX;
-      cursory = p.mouseY;
+      cursorX = p.mouseX;
+      cursorY = p.mouseY;
     } else {
-      cursorx = cx;
-      cursory = cy;
+      cursorX = cx;
+      cursorY = cy;
       p.fill(255);
       p.noStroke();
-      p.ellipse(cursorx, cursory, 50, 50);
+      p.ellipse(cursorX, cursorY, 50, 50);
     }
 
     if (
-      cursorx > 0 &&
-      cursorx < containerW / 2 &&
-      cursory > 0 &&
-      cursory < containerH / 2
+      cursorX > 0 &&
+      cursorX < containerW / 2 &&
+      cursorX > 0 &&
+      cursorY < containerH / 2
     ) {
-      alphaT1 = 0;
+      alphaT1 = 150;
     } else {
-      alphaT1 = 255;
+      alphaT1 = 250;
     }
 
     if (
-      cursorx > containerW / 2 &&
-      cursorx < containerW &&
-      cursory > 0 &&
-      cursory < containerH / 2
+      cursorX > containerW / 2 &&
+      cursorX < containerW &&
+      cursorY > 0 &&
+      cursorY < containerH / 2
     ) {
-      alphaT2 = 0;
+      alphaT2 = 150;
     } else {
-      alphaT2 = 255;
+      alphaT2 = 250;
     }
     if (
-      cursorx > 0 &&
-      cursorx < containerW / 2 &&
-      cursory > containerW / 2 &&
-      cursory < containerH
+      cursorX > 0 &&
+      cursorX < containerW / 2 &&
+      cursorY > containerW / 2 &&
+      cursorY < containerH
     ) {
-      alphaT3 = 0;
+      alphaT3 = 150;
     } else {
-      alphaT3 = 255;
+      alphaT3 = 250;
     }
 
     if (
-      cursorx > containerW / 2 &&
-      cursorx < containerW &&
-      cursory > containerW / 2 &&
-      cursory < containerH
+      cursorX > containerW / 2 &&
+      cursorX < containerW &&
+      cursorY > containerW / 2 &&
+      cursorY < containerH
     ) {
-      alphaT4 = 0;
+      alphaT4 = 150;
     } else {
-      alphaT4 = 255;
+      alphaT4 = 250;
     }
   };
 
