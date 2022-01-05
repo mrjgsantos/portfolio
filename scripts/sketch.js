@@ -22,7 +22,7 @@ var canvas = function (p) {
     img2 = p.loadImage("data/2.png");
     img3 = p.loadImage("data/3.png");
     img4 = p.loadImage("data/4.png");
-    robotoMonoLight = p.loadFont("data/Poppins-Light.ttf");
+    robotoMonoLight = p.loadFont("data/OpenSans-Regular.ttf");
 
     if (p.windowWidth > p.windowHeight) {
       containerH = p.windowHeight;
@@ -74,7 +74,7 @@ var canvas = function (p) {
   };
 
   p.draw = function () {
-    p.background("#191D23");
+    p.background("#E7E7E5");
 
     const dx = p.constrain(p.rotationY, -3, 3);
     const dy = p.constrain(p.rotationX, -3, 3);
@@ -84,36 +84,43 @@ var canvas = function (p) {
     cx = p.constrain(cx, 25, p.width - 25);
     cy = p.constrain(cy, 25, p.height - 25);
 
-    /* p.strokeWeight(1);
-    p.stroke(100); */
-    p.textSize(24);
+    p.textSize(30);
     p.textFont(robotoMonoLight);
-    p.fill(25, 29, 35, alpha1);
+
+    /* p.strokeWeight(3);
+    p.stroke(100); */
+    p.fill(231, 231, 229, alpha1);
     p.image(img1, 0, 0, containerW / 2, containerH / 2);
     p.rect(0, 0, containerW / 2, containerH / 2);
     p.noStroke();
-    p.fill(255);
-    p.text("Editorial", 20, 15, p.LEFT, p.TOP);
+    p.fill(0);
+    /*  p.text("EDITORIAL", 20, containerH / 2 - 60, p.LEFT, p.TOP); */
 
-    /* p.strokeWeight(1);
+    /* p.strokeWeight(3);
     p.stroke(100); */
-    p.fill(25, 29, 35, alpha2);
+    p.fill(231, 231, 229, alpha2);
     p.image(img2, containerW / 2, 0, containerW / 2, containerH / 2);
     p.rect(containerW / 2, 0, containerW / 2, containerH / 2);
-    p.fill(255);
+    p.fill(0);
     p.noStroke();
-    p.text("Web Design", containerW / 2 + 20, 15, p.LEFT, p.TOP);
+    /* p.text(
+      "WEB DESIGN",
+      containerW / 2 + 20,
+      containerH / 2 - 60,
+      p.LEFT,
+      p.TOP
+    ); */
 
-    /* p.strokeWeight(1);
+    /* p.strokeWeight(3);
     p.stroke(100); */
-    p.fill(25, 29, 35, alpha3);
+    p.fill(231, 231, 229, alpha3);
     p.image(img3, 0, containerH / 2, containerW / 2, containerH / 2);
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
-    p.fill(255);
+    p.fill(0);
     p.noStroke();
-    p.text("Fotografia", 20, containerH / 2 + 15, p.LEFT, p.TOP);
+    /* p.text("FOTOGRAFIA", 20, containerH - 60, p.LEFT, p.TOP); */
 
-    p.fill(25, 29, 35, alpha4);
+    p.fill(231, 231, 229, alpha4);
 
     p.image(
       img4,
@@ -125,10 +132,17 @@ var canvas = function (p) {
     /* p.strokeWeight(1);
     p.stroke(100); */
     p.rect(containerW / 2, containerH / 2, containerW / 2, containerH / 2);
-    p.fill(255);
-    p.noStroke();
+    p.fill(0);
 
-    p.text("Vídeo", containerW / 2 + 20, containerH / 2 + 15, p.LEFT, p.TOP);
+    p.stroke(0);
+    p.strokeWeight(1.3);
+
+    p.line(p.width / 2, 0, p.width / 2, p.height);
+
+    p.line(0, p.height / 2, p.width, p.height / 2);
+
+    p.noStroke();
+    /* p.text("VÍDEO", containerW / 2 + 20, containerH - 60, p.LEFT, p.BOTTOM); */
     alpha1 = alpha1 + (alphaT1 - alpha1) * easing;
     alpha2 = alpha2 + (alphaT2 - alpha2) * easing;
     alpha3 = alpha3 + (alphaT3 - alpha3) * easing;

@@ -4,49 +4,65 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  display: flex;
+
   justify-content: space-between;
-  background-color: #191d23;
+  background-color: #e7e7e5;
   flex-direction: row;
   flex-wrap: wrap;
 }
 * {
-  /*   outline: 1px solid red; */
+  /*  outline: 1px solid red; */
+}
+.aboutMe {
+  min-width: fit-content;
 }
 .container {
   padding: 30px;
   max-width: 30%;
+  min-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  line-height: 1.1;
 }
-h1 {
-  font-family: "Poppins", sans-serif;
-  min-width: 300px;
-  font-weight: 700;
-  font-size: 16pt;
+
+.big {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: max(5.208333333333333vw, 30px);
   padding: 0;
   margin: 0;
-  color: white;
+  color: black;
 }
-h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 16pt;
-  padding: 0;
-  margin: 0;
-  color: white;
-  max-width: fit-content;
-}
-p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+.textlogo,
+.titlelogo {
+  font-family: "Open Sans", sans-serif;
+  min-width: fit-content;
   font-size: 12pt;
   padding: 0;
   margin: 0;
-  width: 90%;
-  color: white;
-  min-width: 300px;
+  color: black;
+}
+.textlogo {
+  font-weight: 300;
+}
+
+.titlelogo {
+  font-weight: 400;
+}
+.light {
+  font-weight: 300;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  font-weight: 400;
+
+  padding: 0;
+  margin: 0;
+
+  color: black;
 }
 .aboutMe {
   padding-top: 100;
@@ -55,5 +71,56 @@ p {
   max-width: fit-content;
   height: min-content;
 }
-@media screen and (max-width: 600px) {
+#editorial {
+  left: 1.6276041666666667vw;
+  top: calc(42%);
+  font-size: max(1.953125vw, 24px);
+}
+#webdesign {
+  left: calc(50% + 25px);
+  top: calc(42%);
+  font-size: max(1.953125vw, 24px);
+}
+#fotografia {
+  left: 1.6276041666666667vw;
+  top: 92%;
+  font-size: max(1.953125vw, 24px);
+}
+#video {
+  left: calc(50% + 25px);
+  top: 92%;
+  font-size: max(1.953125vw, 24px);
+}
+
+#canvas {
+  outline: 2px solid black;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  body {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  #editorial {
+    left: 1.6276041666666667vw;
+    top: calc(42%);
+    font-size: max(1.953125vw, 24px);
+  }
+  #webdesign {
+    left: calc(50% + 1.6276041666666667vw);
+    top: calc(42%);
+    font-size: max(1.953125vw, 24px);
+  }
+  #fotografia {
+    left: 1.6276041666666667vw;
+    top: 92%;
+    font-size: max(1.953125vw, 24px);
+  }
+  #video {
+    left: calc(50% + 1.6276041666666667vw);
+    top: 92%;
+    font-size: max(1.953125vw, 24px);
+  }
 }
