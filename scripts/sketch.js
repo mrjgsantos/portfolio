@@ -1,6 +1,6 @@
 var canvas = function (p) {
   let containerW, containerH;
-  let img1, img2, img3, img4;
+  let img1, img2, img3, img4, text1, text2, text3, text4;
   let cursorX, cursorY;
   let cx, cy;
   let alpha1 = 255,
@@ -22,6 +22,11 @@ var canvas = function (p) {
     img2 = p.loadImage("data/2.png");
     img3 = p.loadImage("data/3.png");
     img4 = p.loadImage("data/4.png");
+    text1 = p.loadImage("data/text1.png");
+    text2 = p.loadImage("data/text2.png");
+    text3 = p.loadImage("data/text3.png");
+    text4 = p.loadImage("data/text4.png");
+
     robotoMonoLight = p.loadFont("data/OpenSans-Regular.ttf");
 
     if (p.windowWidth > p.windowHeight) {
@@ -118,6 +123,7 @@ var canvas = function (p) {
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
     p.fill(0);
     p.noStroke();
+    //p.image(text3, 20, containerH / 2, );
     /* p.text("FOTOGRAFIA", 20, containerH - 60, p.LEFT, p.TOP); */
 
     p.fill(231, 231, 229, alpha4);
