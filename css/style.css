@@ -1,3 +1,9 @@
+.nav {
+  display: flex;
+
+  justify-content: space-between;
+}
+
 html,
 body {
   margin: 0;
@@ -10,16 +16,17 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-* {
-  /*  outline: 1px solid red; */
-}
+/* * {
+  outline: 1px solid red;
+} */
 .aboutMe {
   min-width: fit-content;
+  margin-top: 50px;
 }
 .container {
   padding: 30px;
-  max-width: 30%;
-  min-width: fit-content;
+  max-width: 50%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,9 +71,7 @@ p {
 
   color: black;
 }
-.aboutMe {
-  padding-top: 100;
-}
+
 .logo {
   max-width: fit-content;
   height: min-content;
@@ -122,5 +127,26 @@ p {
     left: calc(50% + 1.6276041666666667vw);
     top: 92%;
     font-size: max(1.953125vw, 24px);
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  :not(.container) {
+    justify-content: space-between;
+  }
+  .container {
+    min-width: 90%;
+    max-height: fit-content;
+  }
+  #canvas {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    min-width: 85%;
+    max-height: fit-content;
   }
 }
