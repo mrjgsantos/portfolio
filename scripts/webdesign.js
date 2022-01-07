@@ -19,9 +19,9 @@ var canvas = function (p) {
 
   p.preload = function () {
     img1 = p.loadImage("../data/1.jpg");
-    img2 = p.loadImage("../data/2.jpg");
-    img3 = p.loadImage("../data/3.jpg");
-    img4 = p.loadImage("../data/4.jpg");
+    img2 = p.loadImage("../data/2.png");
+    img3 = p.loadImage("../data/3.png");
+    img4 = p.loadImage("../data/4.png");
     text1 = p.loadImage("../data/text1.png");
     text2 = p.loadImage("../data/text2.png");
     text3 = p.loadImage("../data/text3.png");
@@ -104,17 +104,7 @@ var canvas = function (p) {
     /* p.strokeWeight(3);
     p.stroke(100); */
     p.fill(231, 231, 229, alpha2);
-    p.image(
-      img2,
-      containerW / 2,
-      0,
-      containerW / 2,
-      containerH / 2,
-      0,
-      0,
-      1280,
-      1280
-    );
+    p.image(img2, containerW / 2, 0, containerW / 2, containerH / 2);
     p.rect(containerW / 2, 0, containerW / 2, containerH / 2);
     p.fill(0);
     p.noStroke();
@@ -129,17 +119,7 @@ var canvas = function (p) {
     /* p.strokeWeight(3);
     p.stroke(100); */
     p.fill(231, 231, 229, alpha3);
-    p.image(
-      img3,
-      0,
-      containerH / 2,
-      containerW / 2,
-      containerH / 2,
-      500,
-      0,
-      1280,
-      1280
-    );
+    p.image(img3, 0, containerH / 2, containerW / 2, containerH / 2);
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
     p.fill(0);
     p.noStroke();
@@ -153,11 +133,7 @@ var canvas = function (p) {
       containerW / 2,
       containerH / 2,
       containerW / 2,
-      containerH / 2,
-      500,
-      0,
-      1280,
-      1280
+      containerH / 2
     );
     /* p.strokeWeight(1);
     p.stroke(100); */

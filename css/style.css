@@ -3,7 +3,12 @@
 
   justify-content: space-between;
 }
-
+/* * {
+  outline: 1px solid red;
+} */
+a {
+  text-decoration: none;
+}
 html,
 body {
   margin: 0;
@@ -170,11 +175,18 @@ p {
 }
 
 @media screen and (min-width: 1170px) {
+  html,
+  body {
+    overflow: hidden;
+  }
   .container {
     max-width: 50%;
   }
   #textaboutme {
     max-width: 300px;
+  }
+  p {
+    max-width: 28vw;
   }
 }
 @media screen and (max-width: 1170px) {
@@ -209,22 +221,22 @@ p {
   #editorial {
     left: 1.6276041666666667vw;
     top: calc(42%);
-    font-size: max(1.953125vw, 24px);
+    font-size: max(1.953125vw, 18px);
   }
   #webdesign {
     left: calc(50% + 1.6276041666666667vw);
     top: calc(42%);
-    font-size: max(1.953125vw, 24px);
+    font-size: max(1.953125vw, 18px);
   }
   #fotografia {
     left: 1.6276041666666667vw;
     top: 92%;
-    font-size: max(1.953125vw, 24px);
+    font-size: max(1.953125vw, 18px);
   }
   #video {
     left: calc(50% + 1.6276041666666667vw);
     top: 92%;
-    font-size: max(1.953125vw, 24px);
+    font-size: max(1.953125vw, 18px);
   }
 }
 

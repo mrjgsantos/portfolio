@@ -1,0 +1,71 @@
+<html lang="en">
+   <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+      <script src="../scripts/editorial.js"></script>
+      <link rel="stylesheet" type="text/css" href="../css/style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <title>Document</title>
+      
+   </head>
+   <body>
+      
+
+      <div class="container">
+        
+         
+         <div class="nav">
+            <div class="logo">
+               <h1 class="titlelogo">JORGE SANTOS</h1>
+               <h2 class="textlogo">PORTFOLIO</h2>
+            </div>
+            <div id="center" onclick="on()">
+               <div id="aboutme">
+                  <a href="../index.html"><h1 class="titlelogo">HOME</h1></a>
+                  <img class="arrow" src="../data/arrow.png" alt="Arrow">
+               </div>
+            </div>
+         </div>
+         <div class="aboutMe">
+            <!-- <h1 class="big">DESIGNER,</br><span class="light">FOTÓGRAFO,</span></br><span class="light">VIDEÓGRAFO</span></br>(OU QUASE)</h1> -->
+            <h1 class="big">DESIGNER</br><span class="light">(OU QUASE)</span></h1>
+            <p>O gosto pelo design levou-me ingressar no curso de Design e Multimédia. Atualmente frequento o mestrado de continuidade e estes são alguns dos trabalhos que tenho desenvolvido.</p>
+         </div>
+      </div>
+      <div id="canvas">
+         <div class="link" id="editorial">
+            <p >EDITORIAL</p>
+            <img class="arrow" src="../data/arrow.png" alt="Arrow">
+         </div>
+         <div class="link" id="webdesign">
+            <p >WEBDESIGN</p>
+            <img class="arrow" src="../data/arrow.png" alt="Arrow">
+         </div>
+         <div class="link" id="fotografia">
+            <p >FOTOGRAFIA</p>
+            <img class="arrow" src="../data/arrow.png" alt="Arrow">
+         </div>
+         <div class="link" id="video">
+            <p >VÍDEO</p>
+            <img class="arrow" src="../data/arrow.png" alt="Arrow">
+         </div>
+      </div>
+      <script>
+         function on() {
+           document.getElementById("overlay").style.display = "block";
+         }
+         
+         function off() {
+           document.getElementById("overlay").style.display = "none";
+         }
+      </script>
+      
+   </body>
+</html>
