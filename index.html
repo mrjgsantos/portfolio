@@ -1,39 +1,94 @@
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+   <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+      <script src="scripts/sketch.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <title>Document</title>
+      
+   </head>
+   <body>
+      
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Mono:ital,wght@0,300;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <h1>Jorge Santos</h1>
-        <h2>Designer</h2>
+      <div class="container">
+        
+         <div id="overlay" onclick="off()">
+            <div id="overlayinside">
+               <div class="nav">
+                  <div class="logo">
+                     <h1 class="titlelogo">JORGE SANTOS</h1>
+                     <h2 class="textlogo">PORTFOLIO</h2>
+                  </div>
+                  <div id="center" onclick="on()">
+                     <div id="aboutme">
+                        <h1 class="titlelogo">ABOUT ME</h1>
+                        <img class="arrow" src="data/arrow2.png" alt="Arrow">
+                     </div>
+                  </div>
+               </div>
+               <div class="aboutme">
+                  <h1 class="biggy">ABOUT ME</span></h1>
+                  <p id="textaboutme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque illo totam deserunt? Accusantium, soluta rerum sequi quia impedit quod tempora, perspiciatis ducimus voluptates aperiam ex labore fuga repellendus! Earum, expedita!</p>
+                  <img id="Jorge" src="data/jorge.png"  alt="Jorge Santos">
+                  <div class="social">
+                     <img src="data/ig.png"  width="25px"alt="Social">
+                     <img src="data/in.png" width="25px"alt="Social">
+                     <img src="data/be.png" width="25px"alt="Social">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="nav">
+            <div class="logo">
+               <h1 class="titlelogo">JORGE SANTOS</h1>
+               <h2 class="textlogo">PORTFOLIO</h2>
+            </div>
+            <div id="center" onclick="on()">
+               <div id="aboutme">
+                  <h1 class="titlelogo">ABOUT ME</h1>
+                  <img class="arrow" src="data/arrow.png" alt="Arrow">
+               </div>
+            </div>
+         </div>
+         <div class="aboutMe">
+            <h1 class="big">DESIGNER,</br>FOTÓGRAFO,</br>VIDEÓGRAFO</br><span class="light">(OU QUASE)</span></h1>
+         </div>
       </div>
-      <div class="aboutMe">
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolores aveiro sit amet consectetur, adipisicing elit.
-          Error esse ipsa dolor ratione inventore blanditiis labore enim
-          reiciendis vero placeat assumenda, architecto impedit necessitatibus
-          voluptatibus dicta temporibus iure eligendi quaerat!
-        </p>
+      <div id="canvas">
+         <div class="link" id="editorial">
+            <p >EDITORIAL</p>
+            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         </div>
+         <div class="link" id="webdesign">
+            <p >WEBDESIGN</p>
+            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         </div>
+         <div class="link" id="fotografia">
+            <p >FOTOGRAFIA</p>
+            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         </div>
+         <div class="link" id="video">
+            <p >VÍDEO</p>
+            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         </div>
       </div>
-    </div>
-
-    <div id="canvas"></div>
-    <script src="scripts/sketch.js"></script>
-  </body>
+      <script>
+         function on() {
+           document.getElementById("overlay").style.display = "block";
+         }
+         
+         function off() {
+           document.getElementById("overlay").style.display = "none";
+         }
+      </script>
+      
+   </body>
 </html>

@@ -1,59 +1,282 @@
+.nav {
+  display: flex;
+
+  justify-content: space-between;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  display: flex;
+
   justify-content: space-between;
-  background-color: #191d23;
+  background-color: #e7e7e5;
   flex-direction: row;
   flex-wrap: wrap;
 }
-* {
-  /*   outline: 1px solid red; */
+
+.arrow {
+  margin-left: max(5px, 0.6510416666666666vw);
+  position: relative;
+  max-height: 0.7em;
 }
-.container {
+.aboutme {
+  min-width: fit-content;
+  margin-top: 50px;
+}
+#overlay {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 0;
+  left: 0;
   padding: 30px;
-  max-width: 30%;
-  display: flex;
+  background-color: #e7e7e5;
+  width: calc(100% - 61px);
+  height: calc(100% - 61px);
   flex-direction: column;
   justify-content: space-between;
 }
-h1 {
-  font-family: "Poppins", sans-serif;
-  min-width: 300px;
-  font-weight: 700;
-  font-size: 16pt;
+#overlayinside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: relative;
+  padding: 30px;
+
+  flex-grow: 1;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.1;
+}
+
+.big {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: max(5.208333333333333vw, 30px);
+  padding: 0;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.biggy {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: max(7.208333333333333vw, 30px);
   padding: 0;
   margin: 0;
-  color: white;
+  color: black;
 }
-h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 16pt;
-  padding: 0;
-  margin: 0;
-  color: white;
-  max-width: fit-content;
-}
-p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+
+.textlogo,
+.titlelogo {
+  font-family: "Open Sans", sans-serif;
+  min-width: fit-content;
   font-size: 12pt;
   padding: 0;
   margin: 0;
-  width: 90%;
-  color: white;
-  min-width: 300px;
+  color: black;
 }
-.aboutMe {
-  padding-top: 100;
+.textlogo {
+  font-weight: 300;
 }
+
+.titlelogo {
+  font-weight: 400;
+}
+.light {
+  font-weight: 300;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+
+  font-weight: 400;
+
+  padding: 0;
+  margin: 0;
+
+  color: black;
+}
+
 .logo {
   max-width: fit-content;
   height: min-content;
 }
-@media screen and (max-width: 600px) {
+#jorge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 33.528645833333336vw;
+  z-index: -1;
+}
+#aboutme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#editorial {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 1.6276041666666667vw;
+  top: calc(42%);
+  font-size: max(1.953125vw, 24px);
+}
+#webdesign {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: calc(50% + 25px);
+  top: calc(42%);
+  font-size: max(1.953125vw, 24px);
+}
+#fotografia {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 1.6276041666666667vw;
+  top: 92%;
+  font-size: max(1.953125vw, 24px);
+}
+#video {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: calc(50% + 25px);
+  top: 92%;
+  font-size: max(1.953125vw, 24px);
+}
+
+#canvas {
+  outline: 2px solid black;
+  position: relative;
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    max-width: 50%;
+  }
+  #textaboutme {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .container {
+    max-width: 100vh;
+  }
+  .aboutme {
+    margin-top: 0;
+  }
+  #textaboutme {
+    max-width: 56vh;
+  }
+}
+
+@media screen and (min-width: 812px) and (max-width: 1170px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  #editorial {
+    left: 1.6276041666666667vw;
+    top: calc(42%);
+    font-size: max(1.953125vw, 24px);
+  }
+  #webdesign {
+    left: calc(50% + 1.6276041666666667vw);
+    top: calc(42%);
+    font-size: max(1.953125vw, 24px);
+  }
+  #fotografia {
+    left: 1.6276041666666667vw;
+    top: 92%;
+    font-size: max(1.953125vw, 24px);
+  }
+  #video {
+    left: calc(50% + 1.6276041666666667vw);
+    top: 92%;
+    font-size: max(1.953125vw, 24px);
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  :not(.container) {
+    justify-content: space-between;
+  }
+  .container {
+    min-width: 90%;
+    max-height: fit-content;
+  }
+  #canvas {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    min-width: 85%;
+    min-height: 40vh;
+  }
+  .biggy {
+    font-size: 50pt;
+  }
+  #jorge {
+    max-height: 77.528645833333336vw;
+  }
+  #canvas {
+    position: absolute;
+    bottom: 0;
+  }
+  #overlay {
+    height: calc(100vh - 60px);
+  }
+  .aboutme {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 850px) {
+  .biggy {
+    font-size: 50pt;
+  }
+  #jorge {
+    max-height: 80vw;
+  }
+  #overlay {
+    height: calc(100vh - 58px);
+    width: calc(100vw - 58px);
+  }
+  .aboutme {
+    margin-top: 30px;
+  }
 }
