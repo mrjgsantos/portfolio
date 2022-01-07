@@ -258,7 +258,7 @@ p {
     bottom: 0;
   }
   #overlay {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 118px);
   }
   .aboutme {
     margin-top: 20px;
