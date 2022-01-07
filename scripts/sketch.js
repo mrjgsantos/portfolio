@@ -18,16 +18,16 @@ var canvas = function (p) {
   let video1;
 
   p.preload = function () {
-    img1 = p.loadImage("data/1.jpg");
-    img2 = p.loadImage("data/2.jpg");
-    img3 = p.loadImage("data/3.jpg");
-    img4 = p.loadImage("data/4.jpg");
-    text1 = p.loadImage("data/text1.png");
-    text2 = p.loadImage("data/text2.png");
-    text3 = p.loadImage("data/text3.png");
-    text4 = p.loadImage("data/text4.png");
+    img1 = p.loadImage("./data/1.jpg");
+    img2 = p.loadImage("./data/2.jpg");
+    img3 = p.loadImage("./data/3.jpg");
+    img4 = p.loadImage("./data/4.jpg");
+    text1 = p.loadImage("./data/text1.png");
+    text2 = p.loadImage("./data/text2.png");
+    text3 = p.loadImage("./data/text3.png");
+    text4 = p.loadImage("./data/text4.png");
 
-    robotoMonoLight = p.loadFont("data/OpenSans-Regular.ttf");
+    robotoMonoLight = p.loadFont("./data/OpenSans-Regular.ttf");
 
     if (p.windowWidth > p.windowHeight) {
       containerH = p.windowHeight;
