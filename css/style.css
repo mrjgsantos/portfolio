@@ -22,7 +22,7 @@ body {
   position: relative;
   max-height: 0.7em;
 }
-.aboutMe {
+.aboutme {
   min-width: fit-content;
   margin-top: 50px;
 }
@@ -121,9 +121,7 @@ p {
   flex-direction: row;
   align-items: center;
 }
-#textaboutme {
-  max-width: 300px;
-}
+
 .social {
   position: absolute;
   left: 0;
@@ -174,6 +172,20 @@ p {
 @media screen and (min-width: 1170px) {
   .container {
     max-width: 50%;
+  }
+  #textaboutme {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .container {
+    max-width: 100vh;
+  }
+  .aboutme {
+    margin-top: 0;
+  }
+  #textaboutme {
+    max-width: 56vh;
   }
 }
 
@@ -233,10 +245,38 @@ p {
 @media screen and (max-width: 400px) {
   .container {
     min-width: 85%;
-    max-height: fit-content;
+    min-height: 40vh;
+  }
+  .biggy {
+    font-size: 50pt;
+  }
+  #jorge {
+    max-height: 77.528645833333336vw;
   }
   #canvas {
     position: absolute;
     bottom: 0;
+  }
+  #overlay {
+    height: calc(100vh - 60px);
+  }
+  .aboutme {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 850px) {
+  .biggy {
+    font-size: 50pt;
+  }
+  #jorge {
+    max-height: 80vw;
+  }
+  #overlay {
+    height: calc(100vh - 58px);
+    width: calc(100vw - 58px);
+  }
+  .aboutme {
+    margin-top: 30px;
   }
 }
