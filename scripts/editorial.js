@@ -18,10 +18,10 @@ var canvas = function (p) {
   let video1;
 
   p.preload = function () {
-    img1 = p.loadImage("../data/1.jpg");
-    img2 = p.loadImage("../data/2.jpg");
-    img3 = p.loadImage("../data/3.jpg");
-    img4 = p.loadImage("../data/4.jpg");
+    img1 = p.loadImage("../data/d1.jpg");
+    img2 = p.loadImage("../data/d2.jpg");
+    img3 = p.loadImage("../data/d3.jpg");
+    img4 = p.loadImage("../data/v4.jpg");
     text1 = p.loadImage("../data/text1.png");
     text2 = p.loadImage("../data/text2.png");
     text3 = p.loadImage("../data/text3.png");
@@ -95,7 +95,7 @@ var canvas = function (p) {
     /* p.strokeWeight(3);
     p.stroke(100); */
     p.fill(231, 231, 229, alpha1);
-    p.image(img1, 0, 0, containerW / 2, containerH / 2);
+    p.image(img1, 0, 0, containerW / 2, containerH / 2, 400, 0, 1080, 1080);
     p.rect(0, 0, containerW / 2, containerH / 2);
     p.noStroke();
     p.fill(0);
@@ -110,10 +110,10 @@ var canvas = function (p) {
       0,
       containerW / 2,
       containerH / 2,
+      350,
       0,
-      0,
-      1280,
-      1280
+      1080,
+      1080
     );
     p.rect(containerW / 2, 0, containerW / 2, containerH / 2);
     p.fill(0);
@@ -135,10 +135,10 @@ var canvas = function (p) {
       containerH / 2,
       containerW / 2,
       containerH / 2,
-      500,
+      420,
       0,
-      1280,
-      1280
+      1080,
+      1080
     );
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
     p.fill(0);
@@ -279,16 +279,16 @@ var canvas = function (p) {
   };
 
   p.editorialopen = function () {
-    open("html/editorial.html", "_self");
+    open("https://www.youtube.com/watch?v=7GCg7XwGmns");
   };
   p.webdesignopen = function () {
-    open("html/webdesign.html", "_self");
+    open("https://www.youtube.com/watch?v=5U2Eybv4rHY");
   };
   p.fotografiaopen = function () {
-    open("html/fotografia.html", "_self");
+    open("https://youtu.be/_WQ74N8LEHc");
   };
   p.videoopen = function () {
-    open("html/video.html", "_self");
+    open("https://youtu.be/kLhN0B0oAqE");
   };
 };
 

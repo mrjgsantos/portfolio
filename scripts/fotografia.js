@@ -18,10 +18,10 @@ var canvas = function (p) {
   let video1;
 
   p.preload = function () {
-    img1 = p.loadImage("../data/1.jpg");
-    img2 = p.loadImage("../data/2.jpg");
-    img3 = p.loadImage("../data/3.jpg");
-    img4 = p.loadImage("../data/4.jpg");
+    img1 = p.loadImage("../data/f1.jpg");
+    img2 = p.loadImage("../data/f2.jpg");
+    img3 = p.loadImage("../data/f3.jpg");
+    img4 = p.loadImage("../data/f4.jpg");
     text1 = p.loadImage("../data/text1.png");
     text2 = p.loadImage("../data/text2.png");
     text3 = p.loadImage("../data/text3.png");
@@ -95,7 +95,7 @@ var canvas = function (p) {
     /* p.strokeWeight(3);
     p.stroke(100); */
     p.fill(231, 231, 229, alpha1);
-    p.image(img1, 0, 0, containerW / 2, containerH / 2);
+    p.image(img1, 0, 0, containerW / 2, containerH / 2, 0, 0, 1000, 1000);
     p.rect(0, 0, containerW / 2, containerH / 2);
     p.noStroke();
     p.fill(0);
@@ -110,10 +110,10 @@ var canvas = function (p) {
       0,
       containerW / 2,
       containerH / 2,
+      300,
       0,
-      0,
-      1280,
-      1280
+      1200,
+      1200
     );
     p.rect(containerW / 2, 0, containerW / 2, containerH / 2);
     p.fill(0);
@@ -135,10 +135,10 @@ var canvas = function (p) {
       containerH / 2,
       containerW / 2,
       containerH / 2,
-      500,
       0,
-      1280,
-      1280
+      0,
+      1000,
+      1000
     );
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
     p.fill(0);
@@ -154,10 +154,10 @@ var canvas = function (p) {
       containerH / 2,
       containerW / 2,
       containerH / 2,
-      500,
       0,
-      1280,
-      1280
+      0,
+      1000,
+      1000
     );
     /* p.strokeWeight(1);
     p.stroke(100); */
@@ -195,7 +195,7 @@ var canvas = function (p) {
       cursorX > 0 &&
       cursorY < containerH / 2
     ) {
-      alphaT1 = 150;
+      alphaT1 = 50;
     } else {
       alphaT1 = 250;
     }
@@ -206,7 +206,7 @@ var canvas = function (p) {
       cursorY > 0 &&
       cursorY < containerH / 2
     ) {
-      alphaT2 = 150;
+      alphaT2 = 50;
     } else {
       alphaT2 = 250;
     }
@@ -216,7 +216,7 @@ var canvas = function (p) {
       cursorY > containerW / 2 &&
       cursorY < containerH
     ) {
-      alphaT3 = 150;
+      alphaT3 = 50;
     } else {
       alphaT3 = 250;
     }
@@ -227,7 +227,7 @@ var canvas = function (p) {
       cursorY > containerW / 2 &&
       cursorY < containerH
     ) {
-      alphaT4 = 150;
+      alphaT4 = 50;
     } else {
       alphaT4 = 250;
     }
@@ -279,16 +279,16 @@ var canvas = function (p) {
   };
 
   p.editorialopen = function () {
-    open("html/editorial.html", "_self");
+    open("https://jgsantos5.wixsite.com/jorgesantos/natureza");
   };
   p.webdesignopen = function () {
-    open("html/webdesign.html", "_self");
+    open("https://jgsantos5.wixsite.com/jorgesantos/viagens");
   };
   p.fotografiaopen = function () {
-    open("html/fotografia.html", "_self");
+    open("https://jgsantos5.wixsite.com/jorgesantos/viagens");
   };
   p.videoopen = function () {
-    open("html/video.html", "_self");
+    open("https://jgsantos5.wixsite.com/jorgesantos/eventos");
   };
 };
 
