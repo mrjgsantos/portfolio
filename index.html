@@ -3,7 +3,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
       <script src="scripts/sketch.js"></script>
-
+      
       <link rel="stylesheet" type="text/css" href="css/style.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,12 +13,12 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      <title>Document</title>
+      <title>Portfolio - Jorge Santos</title>
       
    </head>
    <body>
       
-
+      
       <div class="container">
         
          <div id="overlay" onclick="off()">
@@ -31,7 +31,7 @@
                   <div id="center" onclick="on()">
                      <div id="aboutme">
                         <h1 class="titlelogo">ABOUT ME</h1>
-                        <img class="arrow" src="data/arrow2.png" alt="Arrow">
+                        <img class="arrow2" src="data/arrow2.png" alt="Arrow">
                      </div>
                   </div>
                </div>
@@ -55,7 +55,7 @@
             <div id="center" onclick="on()">
                <div id="aboutme">
                   <h1 class="titlelogo">ABOUT ME</h1>
-                  <img class="arrow" src="data/arrow.png" alt="Arrow">
+                  <img class="arrow2" src="data/arrow.png" alt="Arrow">
                </div>
             </div>
          </div>
@@ -64,21 +64,29 @@
          </div>
       </div>
       <div id="canvas">
-         <div class="link" id="editorial">
-            <p >DESIGN GRÁFICO</p>
+         <div id="textcontainer1">
+            <div class="link" >
+               <p >DESIGN</br>GRÁFICO</p>
             <img class="arrow" src="data/arrow.png" alt="Arrow">
+            </div>
          </div>
-         <div class="link" id="webdesign">
-            <p >WEBDESIGN</p>
+         <div id="textcontainer2">
+            <div class="link" >
+               <p >WEBDESIGN</p>
             <img class="arrow" src="data/arrow.png" alt="Arrow">
+            </div>
          </div>
-         <div class="link" id="fotografia">
-            <p >FOTOGRAFIA</p>
-            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         <div id="textcontainer3">
+            <div class="link" >
+               <p >FOTOGRAFIA</p>
+               <img class="arrow" src="data/arrow.png" alt="Arrow">
+            </div>
+            
          </div>
-         <div class="link" id="video">
-            <p >VÍDEO</p>
-            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         <div id="textcontainer4">
+            <div class="link" ><p >VÍDEO</p>
+               <img class="arrow" src="data/arrow.png" alt="Arrow"></div>
+            
          </div>
       </div>
       <script>
