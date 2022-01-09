@@ -19,7 +19,7 @@ var canvas = function (p) {
     img1 = p.loadImage("../data/d1.jpg");
     img2 = p.loadImage("../data/d2.jpg");
     img3 = p.loadImage("../data/d3.jpg");
-    img4 = p.loadImage("../data/v4.jpg");
+    img4 = p.loadImage("../data/w1.jpg");
 
     cursor = p.loadImage("../data/cursor.png");
 
@@ -134,7 +134,7 @@ var canvas = function (p) {
       containerH / 2,
       containerW / 2,
       containerH / 2,
-      500,
+      0,
       0,
       1280,
       1280
@@ -263,16 +263,20 @@ var canvas = function (p) {
   };
 
   p.editorialopen = function () {
-    open("https://www.youtube.com/watch?v=7GCg7XwGmns");
+    open(
+      "https://www.behance.net/gallery/112183663/All-Summer-in-a-Day-Ray-Bradbury"
+    );
   };
   p.webdesignopen = function () {
-    open("https://www.youtube.com/watch?v=5U2Eybv4rHY");
+    open(
+      "https://www.behance.net/gallery/100862893/Ciclo-de-Conversas-Design-Multimdia"
+    );
   };
   p.fotografiaopen = function () {
-    open("https://youtu.be/_WQ74N8LEHc");
+    open("https://www.behance.net/gallery/100869411/Interactive-Poster");
   };
   p.videoopen = function () {
-    open("https://youtu.be/kLhN0B0oAqE");
+    open("https://www.behance.net/gallery/123532049/PlayRoom");
   };
 };
 

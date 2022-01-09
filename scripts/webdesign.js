@@ -262,16 +262,20 @@ var canvas = function (p) {
   };
 
   p.editorialopen = function () {
-    open("https://www.youtube.com/watch?v=7GCg7XwGmns");
+    open("https://www.behance.net/gallery/123532049/PlayRoom");
   };
   p.webdesignopen = function () {
-    open("https://www.youtube.com/watch?v=5U2Eybv4rHY");
+    open(
+      "https://www.behance.net/gallery/112183663/All-Summer-in-a-Day-Ray-Bradbury"
+    );
   };
   p.fotografiaopen = function () {
-    open("https://youtu.be/_WQ74N8LEHc");
+    open(
+      "https://www.behance.net/gallery/100862893/Ciclo-de-Conversas-Design-Multimdia"
+    );
   };
   p.videoopen = function () {
-    open("https://youtu.be/kLhN0B0oAqE");
+    open("https://www.behance.net/gallery/97134403/Transmedia-Storytelling");
   };
 };
 
