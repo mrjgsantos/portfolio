@@ -266,11 +266,6 @@ var canvas = function (p) {
       }
     }
 
-    cx += dx * 2;
-    cy += dy * 2;
-    cx = p.constrain(cx, 25, p.width - 25);
-    cy = p.constrain(cy, 25, p.height - 25);
-
     p.textSize(30);
     p.textFont(robotoMonoLight);
 
@@ -353,6 +348,11 @@ var canvas = function (p) {
     alpha2 = alpha2 + (alphaT2 - alpha2) * easing;
     alpha3 = alpha3 + (alphaT3 - alpha3) * easing;
     alpha4 = alpha4 + (alphaT4 - alpha4) * easing;
+
+    cx += dx * 2;
+    cy += dy * 2;
+    cx = p.constrain(cx, 10, p.width - 10);
+    cy = p.constrain(cy, 10, p.height - 10);
 
     if (typeof window.orientation == "undefined") {
       cursorX = p.mouseX;
