@@ -287,7 +287,6 @@ var canvas = function (p) {
       img1.width
     );
 
-    p.print(img1.height);
     p.rect(0, 0, containerW / 2, containerH / 2);
     p.noStroke();
     p.fill(0);

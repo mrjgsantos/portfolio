@@ -21,14 +21,14 @@
       
       <div class="container">
         
-         <div id="overlay" onclick="off()">
+         <div id="overlay" >
             <div id="overlayinside">
                <div class="nav">
                   <div class="logo">
                      <h1 class="titlelogo">JORGE SANTOS</h1>
                      <h2 class="textlogo">PORTFOLIO</h2>
                   </div>
-                  <div id="center" onclick="on()">
+                  <div  id="center" >
                      <div id="aboutme">
                         <h1 class="titlelogo">ABOUT ME</h1>
                         <img class="arrow2" src="data/arrow2.png" alt="Arrow">
@@ -37,7 +37,7 @@
                </div>
                <div class="aboutme">
                   <h1 class="biggy">ABOUT ME</span></h1>
-                  <p id="textaboutme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque illo totam deserunt? Accusantium, soluta rerum sequi quia impedit quod tempora, perspiciatis ducimus voluptates aperiam ex labore fuga repellendus! Earum, expedita!</p>
+                  <p id="textaboutme"> Prazer, o meu nome é Jorge Santos, tenho 21 anos e sou licenciado em Design e Multimédia pela Universidade de Coimbra. Aproveita para dar uma vista de olhos nos meus trabalhos!</p>
                   <img id="Jorge" src="data/jorge.png"  alt="Jorge Santos">
                   <div class="social">
                      <img src="data/ig.png"  width="25px"alt="Social">
@@ -47,18 +47,23 @@
                </div>
             </div>
          </div>
+
+
+
          <div class="nav">
             <div class="logo">
                <h1 class="titlelogo">JORGE SANTOS</h1>
                <h2 class="textlogo">PORTFOLIO</h2>
             </div>
-            <div id="center" onclick="on()">
+            <div id="center" class="menu" >
                <div id="aboutme">
                   <h1 class="titlelogo">ABOUT ME</h1>
                   <img class="arrow2" src="data/arrow.png" alt="Arrow">
                </div>
             </div>
          </div>
+
+
          <div class="aboutMe">
             <h1 class="big">DESIGNER,</br>FOTÓGRAFO,</br>VIDEÓGRAFO</br><span class="light">(OU QUASE)</span></h1>
          </div>
@@ -89,7 +94,7 @@
             
          </div>
       </div>
-      <script>
+      <!-- <script>
          function on() {
            document.getElementById("overlay").style.display = "block";
          }
@@ -97,7 +102,24 @@
          function off() {
            document.getElementById("overlay").style.display = "none";
          }
+      </script> -->
+      <script>
+         /* APARECER O MENU */
+var menu = document.querySelector(".menu");
+
+menu.addEventListener("click", function (evt) {
+  console.log("button click", evt);
+  document.querySelector("#overlay").classList.toggle("show");
+});
+
+document.addEventListener("click", function (event) {
+  console.log("document click", event);
+  var isClickInsideButton = menu.contains(event.target);
+  if (!isClickInsideButton) {
+    document.querySelector("#overlay").classList.remove("show");
+  }
+});
+
       </script>
-      
    </body>
 </html>
