@@ -145,9 +145,9 @@ var canvas = function (p) {
         (cursorX > (3 * p.width) / 8) &
         (cursorX < (4 * p.width) / 8)
       ) {
-        mapimage14 = 300;
+        mapimage14 = 180;
         mapimage1 = mapimage14;
-        img1 = d4;
+        img1 = w1;
       } else {
         mapimage11 = 300;
         img1 = d1;
