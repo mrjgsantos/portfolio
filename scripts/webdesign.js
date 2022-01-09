@@ -81,8 +81,8 @@ var canvas = function (p) {
 
     cx += dx * 2;
     cy += dy * 2;
-    cx = p.constrain(cx, 25, p.width - 25);
-    cy = p.constrain(cy, 25, p.height - 25);
+    cx = p.constrain(cx, 10, p.width - 10);
+    cy = p.constrain(cy, 10, p.height - 10);
 
     p.textSize(30);
     p.textFont(robotoMonoLight);
