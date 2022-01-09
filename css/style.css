@@ -27,8 +27,9 @@ body {
 #overlay {
   position: absolute;
   top: 0;
-  left: -150%;
+
   background-color: #485c73;
+  left: -150%;
   transition: left 1s;
   z-index: 5;
   background-color: #e7e7e5;
@@ -380,10 +381,13 @@ p {
     bottom: 0;
   }
   #overlay {
+    left: -150%;
+    transition: left 1s;
     height: calc(100vh - 60px);
   }
 
   #overlay.show {
+    left: 0;
     height: calc(100vh - 60px);
   }
 }
@@ -396,10 +400,13 @@ p {
     max-height: 80vw;
   }
   #overlay {
+    left: -150%;
+    transition: left 1s;
     height: calc(100vh - 58px);
     width: calc(100vw - 58px);
   }
   #overlay.show {
+    left: 0;
     height: calc(100vh - 58px);
     width: calc(100vw - 58px);
   }
