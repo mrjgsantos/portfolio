@@ -3,7 +3,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
       <script src="scripts/sketch.js"></script>
-
+      
       <link rel="stylesheet" type="text/css" href="css/style.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,83 +13,87 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      <title>Document</title>
+      <title>Portfolio - Jorge Santos</title>
       
    </head>
    <body>
       
-
+      
       <div class="container">
         
-         <div id="overlay" onclick="off()">
+         <div id="overlay" >
             <div id="overlayinside">
                <div class="nav">
                   <div class="logo">
                      <h1 class="titlelogo">JORGE SANTOS</h1>
                      <h2 class="textlogo">PORTFOLIO</h2>
                   </div>
-                  <div id="center" onclick="on()">
+                  <div  id="center" >
                      <div id="aboutme">
                         <h1 class="titlelogo">ABOUT ME</h1>
-                        <img class="arrow" src="data/arrow2.png" alt="Arrow">
+                        <img class="arrow2" src="data/arrow2.png" alt="Arrow">
                      </div>
                   </div>
                </div>
                <div class="aboutme">
                   <h1 class="biggy">ABOUT ME</span></h1>
-                  <p id="textaboutme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque illo totam deserunt? Accusantium, soluta rerum sequi quia impedit quod tempora, perspiciatis ducimus voluptates aperiam ex labore fuga repellendus! Earum, expedita!</p>
+                  <p id="textaboutme"> Prazer, o meu nome é Jorge Santos, tenho 21 anos e sou licenciado em Design e Multimédia pela Universidade de Coimbra. Aproveita para dar uma vista de olhos nos meus trabalhos!</p>
                   <img id="Jorge" src="data/jorge.png"  alt="Jorge Santos">
                   <div class="social">
-                     <img src="data/ig.png"  width="25px"alt="Social">
-                     <img src="data/in.png" width="25px"alt="Social">
-                     <img src="data/be.png" width="25px"alt="Social">
+                     <a href="https://www.instagram.com/mr.jorgesantos/" target="_blank"><img src="data/ig.png"  width="25px"alt="Social"></a>
+                     <a href="https://www.linkedin.com/in/jorge-santos-315757161/" target="_blank"><img src="data/in.png" width="25px"alt="Social"></a>
+                     <a href="https://www.behance.net/jorgegsantos" target="_blank"><img src="data/be.png" width="25px"alt="Social"></a>
                   </div>
                </div>
             </div>
          </div>
+
+
+
          <div class="nav">
             <div class="logo">
                <h1 class="titlelogo">JORGE SANTOS</h1>
                <h2 class="textlogo">PORTFOLIO</h2>
             </div>
-            <div id="center" onclick="on()">
+            <div id="center" class="menu" >
                <div id="aboutme">
                   <h1 class="titlelogo">ABOUT ME</h1>
-                  <img class="arrow" src="data/arrow.png" alt="Arrow">
+                  <img class="arrow2" src="data/arrow.png" alt="Arrow">
                </div>
             </div>
          </div>
+
+
          <div class="aboutMe">
             <h1 class="big">DESIGNER,</br>FOTÓGRAFO,</br>VIDEÓGRAFO</br><span class="light">(OU QUASE)</span></h1>
          </div>
       </div>
       <div id="canvas">
-         <div class="link" id="editorial">
-            <p >DESIGN GRÁFICO</p>
+         <div id="textcontainer1">
+            <div class="link" >
+               <p >DESIGN</br>GRÁFICO</p>
             <img class="arrow" src="data/arrow.png" alt="Arrow">
+            </div>
          </div>
-         <div class="link" id="webdesign">
-            <p >WEBDESIGN</p>
+         <div id="textcontainer2">
+            <div class="link" >
+               <p >WEBDESIGN</p>
             <img class="arrow" src="data/arrow.png" alt="Arrow">
+            </div>
          </div>
-         <div class="link" id="fotografia">
-            <p >FOTOGRAFIA</p>
-            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         <div id="textcontainer3">
+            <div class="link" >
+               <p >FOTOGRAFIA</p>
+               <img class="arrow" src="data/arrow.png" alt="Arrow">
+            </div>
+            
          </div>
-         <div class="link" id="video">
-            <p >VÍDEO</p>
-            <img class="arrow" src="data/arrow.png" alt="Arrow">
+         <div id="textcontainer4">
+            <div class="link" ><p >VÍDEO</p>
+               <img class="arrow" src="data/arrow.png" alt="Arrow"></div>
+            
          </div>
       </div>
-      <script>
-         function on() {
-           document.getElementById("overlay").style.display = "block";
-         }
-         
-         function off() {
-           document.getElementById("overlay").style.display = "none";
-         }
-      </script>
-      
+      <script src="scripts/menu.js"></script>
    </body>
 </html>

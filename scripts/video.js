@@ -1,6 +1,6 @@
 var canvas = function (p) {
   let containerW, containerH;
-  let img1, img2, img3, img4, text1, text2, text3, text4;
+  let img1, img2, img3, img4, cursor;
   let cursorX, cursorY;
   let cx, cy;
   let alpha1 = 255,
@@ -15,17 +15,12 @@ var canvas = function (p) {
   let easing = 0.07;
   let permissionGranted = false;
 
-  let video1;
-
   p.preload = function () {
     img1 = p.loadImage("../data/v1.jpg");
     img2 = p.loadImage("../data/v2.jpg");
     img3 = p.loadImage("../data/v3.jpg");
     img4 = p.loadImage("../data/v4.jpg");
-    text1 = p.loadImage("../data/text1.png");
-    text2 = p.loadImage("../data/text2.png");
-    text3 = p.loadImage("../data/text3.png");
-    text4 = p.loadImage("../data/text4.png");
+    cursor = p.loadImage("../data/cursor.png");
 
     robotoMonoLight = p.loadFont("../data/OpenSans-Regular.ttf");
 
@@ -86,23 +81,18 @@ var canvas = function (p) {
 
     cx += dx * 2;
     cy += dy * 2;
-    cx = p.constrain(cx, 25, p.width - 25);
-    cy = p.constrain(cy, 25, p.height - 25);
+    cx = p.constrain(cx, 10, p.width - 10);
+    cy = p.constrain(cy, 10, p.height - 10);
 
     p.textSize(30);
     p.textFont(robotoMonoLight);
 
-    /* p.strokeWeight(3);
-    p.stroke(100); */
     p.fill(231, 231, 229, alpha1);
-    p.image(img1, 0, 0, containerW / 2, containerH / 2, 500, 0, 1280, 1280);
+    p.image(img1, 0, 0, containerW / 2, containerH / 2, 500, 0, 1080, 1080);
     p.rect(0, 0, containerW / 2, containerH / 2);
     p.noStroke();
     p.fill(0);
-    /*  p.text("EDITORIAL", 20, containerH / 2 - 60, p.LEFT, p.TOP); */
 
-    /* p.strokeWeight(3);
-    p.stroke(100); */
     p.fill(231, 231, 229, alpha2);
     p.image(
       img2,
@@ -110,24 +100,15 @@ var canvas = function (p) {
       0,
       containerW / 2,
       containerH / 2,
-      250,
+      375,
       0,
-      1280,
-      1280
+      1080,
+      1080
     );
     p.rect(containerW / 2, 0, containerW / 2, containerH / 2);
     p.fill(0);
     p.noStroke();
-    /* p.text(
-      "WEB DESIGN",
-      containerW / 2 + 20,
-      containerH / 2 - 60,
-      p.LEFT,
-      p.TOP
-    ); */
 
-    /* p.strokeWeight(3);
-    p.stroke(100); */
     p.fill(231, 231, 229, alpha3);
     p.image(
       img3,
@@ -143,8 +124,6 @@ var canvas = function (p) {
     p.rect(0, containerH / 2, containerW / 2, containerH / 2);
     p.fill(0);
     p.noStroke();
-    //p.image(text3, 20, containerH / 2, );
-    /* p.text("FOTOGRAFIA", 20, containerH - 60, p.LEFT, p.TOP); */
 
     p.fill(231, 231, 229, alpha4);
 
@@ -159,8 +138,7 @@ var canvas = function (p) {
       1280,
       1280
     );
-    /* p.strokeWeight(1);
-    p.stroke(100); */
+
     p.rect(containerW / 2, containerH / 2, containerW / 2, containerH / 2);
     p.fill(0);
 
@@ -172,13 +150,16 @@ var canvas = function (p) {
     p.line(0, p.height / 2, p.width, p.height / 2);
 
     p.noStroke();
-    /* p.text("VÍDEO", containerW / 2 + 20, containerH - 60, p.LEFT, p.BOTTOM); */
+
     alpha1 = alpha1 + (alphaT1 - alpha1) * easing;
     alpha2 = alpha2 + (alphaT2 - alpha2) * easing;
     alpha3 = alpha3 + (alphaT3 - alpha3) * easing;
     alpha4 = alpha4 + (alphaT4 - alpha4) * easing;
 
     if (typeof window.orientation == "undefined") {
+      p.imageMode(p.CENTER);
+      p.image(cursor, p.mouseX, p.mouseY, 20, 20);
+      p.imageMode(p.CORNER);
       cursorX = p.mouseX;
       cursorY = p.mouseY;
     } else {
@@ -186,7 +167,9 @@ var canvas = function (p) {
       cursorY = cy;
       p.fill(255);
       p.noStroke();
-      p.ellipse(cursorX, cursorY, 50, 50);
+      p.imageMode(p.CENTER);
+      p.image(cursor, cursorX, cursorY, 20, 20);
+      p.imageMode(p.CORNER);
     }
 
     if (
