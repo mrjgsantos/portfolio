@@ -50,7 +50,7 @@ var canvas = function (p) {
     f4 = p.loadImage("./data/f4.jpg");
     v1 = p.loadImage("./data/v1.jpg");
     v2 = p.loadImage("./data/v2.jpg");
-    v3 = p.loadImage("./data/v3.jpg");
+    v3 = p.loadImage("./data/v3.png");
     v4 = p.loadImage("./data/v4.jpg");
     w1 = p.loadImage("./data/w1.jpg");
     w2 = p.loadImage("./data/w2.png");
@@ -250,7 +250,7 @@ var canvas = function (p) {
         (cursorX > (6 * p.width) / 8) &
         (cursorX < (7 * p.width) / 8)
       ) {
-        mapimage43 = 200;
+        mapimage43 = 0;
         mapimage4 = mapimage43;
         img4 = v3;
       } else if (

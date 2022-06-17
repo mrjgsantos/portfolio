@@ -104,7 +104,7 @@ a {
 .titlelogo {
   font-family: "Open Sans", sans-serif;
   min-width: fit-content;
-  font-size: 12pt;
+  font-size: 25pt;
   padding: 0;
   margin: 0;
   color: black;
@@ -126,6 +126,9 @@ p {
   padding: 0;
   margin: 0;
   color: black;
+}
+.textoCorrido {
+  font-size: 30;
 }
 
 .logo {

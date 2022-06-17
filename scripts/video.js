@@ -18,7 +18,7 @@ var canvas = function (p) {
   p.preload = function () {
     img1 = p.loadImage("../data/v1.jpg");
     img2 = p.loadImage("../data/v2.jpg");
-    img3 = p.loadImage("../data/v3.jpg");
+    img3 = p.loadImage("../data/v3.png");
     img4 = p.loadImage("../data/v4.jpg");
     cursor = p.loadImage("../data/cursor.png");
 
@@ -116,7 +116,7 @@ var canvas = function (p) {
       containerH / 2,
       containerW / 2,
       containerH / 2,
-      420,
+      0,
       0,
       1280,
       1280
@@ -268,7 +268,7 @@ var canvas = function (p) {
     open("https://www.youtube.com/watch?v=5U2Eybv4rHY");
   };
   p.fotografiaopen = function () {
-    open("https://youtu.be/_WQ74N8LEHc");
+    open("https://www.youtube.com/watch?v=XTzSQEO1BQw");
   };
   p.videoopen = function () {
     open("https://youtu.be/kLhN0B0oAqE");
